@@ -1,24 +1,8 @@
-#DevPro Performance Testing Project
+**DevPro Performance Testing Project**
 
 This project contains a series of performance tests for a user listing API. Each test scenario simulates different load conditions and is designed to measure system performance under these conditions.
 
-1 - Project Structure:
-
-devpro/
-│
-├── config/
-│   └── # K6 configuration files
-│
-├── reports/
-│   └── # Reports generated after test execution
-│
-├── scenarios/
-    ├── getListUsersLoadTest-script.js
-    ├── getListUsersSoakTest-script.js
-    ├── getListUsersSpikeTest-script.js
-    ├── getListUsersStressTest-script.js
-
-2 - Test Descriptions:
+**1 - Test Descriptions:**
 
 Load Test - getListUsersLoadTest-script.js
 The load test simulates an increasing number of users accessing the system over time. The goal is to determine whether the system can handle the expected number of concurrent users without performance degradation. This type of test helps identify the acceptable traffic limit for the system.
@@ -32,13 +16,13 @@ This test evaluates how the system reacts to sudden and dramatic increases in us
 Stress Test - getListUsersStressTest-script.js
 The stress test pushes the system beyond its capacity limits. The goal is to discover the system's breaking point, identifying how far it can go before experiencing significant performance issues.
 
-3 - Prerequisites
+**2 - Prerequisites**
 
 Node.js - Make sure you have Node.js installed. You can download it here.
 K6 - K6 is the load testing tool used in this project. Install it using the instructions below.
 
 
-4 - Installing K6
+**3 - Installing K6**
 
 Install K6 based on your operating system:
 
@@ -54,7 +38,7 @@ On Debian/Ubuntu:
 sudo apt install k6
 
 
-5 - Running the Tests
+**4 - Running the Tests**
 
 After installing K6, you can run the tests as follows:
 
@@ -76,7 +60,7 @@ Stress Test:
 k6 run scenarios/getListUsersStressTest-script.js
 
 
-6 - Generating Reports
+**5 - Generating Reports**
 
 Reports will be automatically generated in the reports/ folder after running the tests. These reports contain detailed information about the system's performance during each test.
 
